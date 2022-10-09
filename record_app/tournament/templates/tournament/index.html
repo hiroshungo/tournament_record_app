@@ -1,0 +1,115 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>tournament</title>
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+    <body class="containers">
+        <p class="h5 mt-4">{{result|safe}}</p>
+        <form action="{% url 'index' %}" method="post">
+            {% csrf_token %}
+            <table>    
+                 {{ form.as_p }}
+                <input type="submit" class="btn btn-primary my-2" value="click">
+            </table>
+        </form>
+        <div class = contents>
+            <label class="tournament">
+                <span class="number">
+                    <input type="checkbox" id="grape" name="grape"
+                        class="content_list" onchange="displaySelectedCreate()">
+                    <span class="number">
+                    受付番号
+                </span>
+            </label>
+            <label class="tournament">
+                <input type="checkbox" id="apple" name="apple"
+                        class="content_list" onchange="displaySelectedCreate()">
+                <label for="apple">部門名</label>
+            </label>
+            <label class="tournament">
+                <input type="checkbox" id="apple" name="apple"
+                        class="content_list" onchange="displaySelectedCreate()">
+                <label for="apple">学校名</label>
+            </label>
+            <label class="tournament">
+                <input type="checkbox" id="orange" name="orange"
+                        class="content_list" onchange="displaySelectedCreate()">
+                <label for="orange">チーム名</label>
+            </label>
+            <label class="tournament">
+                <input type="checkbox" id="apple" name="apple"
+                        class="content_list" onchange="displaySelectedCreate()">
+                <label for="apple">学校名</label>
+            </label>
+            <label class="tournament">
+                <input type="checkbox" id="orange" name="orange"
+                        class="content_list" onchange="displaySelectedCreate()">
+                <label for="orange">クリア時間</label>
+            </label>
+
+                <input type="checkbox" id="grape" name="grape"
+                        class="content_list" onchange="displaySelectedCreate()">
+                <label for="grape">クリア点数</label>
+            </label>
+            <div>選択結果</div>
+            <div id = extracted_words>
+            </div>
+            
+          
+        </div>
+        <div id="reception-name">
+            <p>受付番号</p>
+            <p id="counter">0</p>
+            <button type="button" id="increment">+1</button>
+            <button type="button" id="decrement">-1</button>
+            <button type="button" id="reset">Re</button>
+        </div>
+        <div id="department-name">
+            <p>部門名</p>
+            <input type="button" value="追加" onclick="clickBtn3()" />
+            <input type="button" value="削除" onclick="clickBtn4()" /> 
+            <div id="div2"></div>
+        </div>
+        <div id="school-name">
+            <p>学校名</p>
+            <input type="button" value="追加" onclick="clickBtn5()" />
+            <input type="button" value="削除" onclick="clickBtn6()" /> 
+            <div id="div3"></div>
+        </div>
+        <div id="team-name">
+            <p>チーム名</p>
+            <input type="button" value="追加" onclick="clickBtn7()" />
+            <input type="button" value="削除" onclick="clickBtn8()" /> 
+            <div id="div4"></div>
+        </div>
+        <div id="time-name1">
+            <p>クリア時間</p>
+            <p>0.1秒を指定：<input type="time" name="example2" step="0.001"></p>
+        </div>
+        <div id="time-name2">
+            <div id="container">
+                <div id="time">00:00.000</div>
+                <div id="buttons">
+                    <input id="start1" type="button" value="start">
+                    <input id="stop" type="button" value="stop">
+                    <input id="reset1" type="button" value="reset">
+                </div>
+            </div> 
+        </div>
+        <div id="number-name">
+            <p>クリア点数</p>
+            <input type="number">
+        </div>
+       
+
+        
+
+        <script src="{% static 'js/style.js' %}"></script>
+        <script src="{% static 'js/count.js' %}"></script>
+        <script src="{% static 'js/stopwatch.js' %}"></script>
+    
+    </body>
+</html>
