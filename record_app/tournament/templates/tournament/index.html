@@ -17,42 +17,34 @@
         </form>
         <div class = contents>
             <label class="tournament">
-                <span class="number">
-                    <input type="checkbox" id="grape" name="grape"
+                    <input type="checkbox" id="number" name="number"
                         class="content_list" onchange="displaySelectedCreate()">
-                    <span class="number">
-                    受付番号
-                </span>
+                <label for="number_display">受付番号</label>
             </label>
             <label class="tournament">
-                <input type="checkbox" id="apple" name="apple"
+                <input type="checkbox" id="department" name="department"
                         class="content_list" onchange="displaySelectedCreate()">
-                <label for="apple">部門名</label>
+                <label for="department_display">部門名</label>
             </label>
             <label class="tournament">
-                <input type="checkbox" id="apple" name="apple"
+                <input type="checkbox" id="school" name="school"
                         class="content_list" onchange="displaySelectedCreate()">
-                <label for="apple">学校名</label>
+                <label for="school_name">学校名</label>
             </label>
             <label class="tournament">
-                <input type="checkbox" id="orange" name="orange"
+                <input type="checkbox" id="team" name="team"
                         class="content_list" onchange="displaySelectedCreate()">
-                <label for="orange">チーム名</label>
+                <label for="team_name">チーム名</label>
             </label>
             <label class="tournament">
-                <input type="checkbox" id="apple" name="apple"
+                <input type="checkbox" id="time_name" name="time_name"
                         class="content_list" onchange="displaySelectedCreate()">
-                <label for="apple">学校名</label>
-            </label>
-            <label class="tournament">
-                <input type="checkbox" id="orange" name="orange"
-                        class="content_list" onchange="displaySelectedCreate()">
-                <label for="orange">クリア時間</label>
+                <label for="time_display">クリア時間</label>
             </label>
 
-                <input type="checkbox" id="grape" name="grape"
+                <input type="checkbox" id="point" name="point"
                         class="content_list" onchange="displaySelectedCreate()">
-                <label for="grape">クリア点数</label>
+                <label for="point_display">クリア点数</label>
             </label>
             <div>選択結果</div>
             <div id = extracted_words>
@@ -99,7 +91,7 @@
                 </div>
             </div> 
         </div>
-        <div id="number-name">
+        <div id="number-point">
             <p>クリア点数</p>
             <input type="number">
         </div>
@@ -109,6 +101,7 @@
         
 
         <script src="{% static 'js/style.js' %}"></script>
+        <script src="{% static 'js/mouseover.js' %}"></script>
         <script src="{% static 'js/count.js' %}"></script>
         <script src="{% static 'js/stopwatch.js' %}"></script>
     
