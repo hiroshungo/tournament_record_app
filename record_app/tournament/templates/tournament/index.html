@@ -18,7 +18,7 @@
         <div class = contents>
             <label class="tournament">
                     <input type="checkbox" id="number" name="number"
-                        class="content_list" onchange="displaySelectedCreate()">
+                        class="content_list" onchange="displaySelectedCreate();showFeatures()">
                 <label for="number_display">受付番号</label>
             </label>
             <label class="tournament">
@@ -101,7 +101,6 @@
         
 
         <script src="{% static 'js/style.js' %}"></script>
-        <script src="{% static 'js/mouseover.js' %}"></script>
         <script src="{% static 'js/count.js' %}"></script>
         <script src="{% static 'js/stopwatch.js' %}"></script>
     

@@ -18,6 +18,17 @@ function displaySelectedCreate(){
   } 
   //表示箇所に選択されている果物を表示
   favorites_create.textContent = displayed_create
+}
+document.getElementById("reception-name").style.visibility ="hidden";
+function showFeatures(){
+  const  reception = document.getElementById("reception-name");
+  if(reception.style.visibility=="visible"){
+		// hiddenで非表示
+		reception.style.visibility ="hidden";
+	}else{
+		// visibleで表示
+		reception.style.visibility ="visible";
+	}
 
-  
+
 }
