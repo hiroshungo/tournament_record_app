@@ -15,6 +15,7 @@
                 <input type="submit" class="btn btn-primary my-2" value="click">
             </table>
         </form>
+        
         <div class = contents>
             <label class="tournament">
                     <input type="checkbox" id="number" name="number"
@@ -23,27 +24,27 @@
             </label>
             <label class="tournament">
                 <input type="checkbox" id="department" name="department"
-                        class="content_list" onchange="displaySelectedCreate()">
+                        class="content_list" onchange="displaySelectedCreate();showFeatures2()">
                 <label for="department_display">部門名</label>
             </label>
             <label class="tournament">
                 <input type="checkbox" id="school" name="school"
-                        class="content_list" onchange="displaySelectedCreate()">
+                        class="content_list" onchange="displaySelectedCreate();showFeatures3()">
                 <label for="school_name">学校名</label>
             </label>
             <label class="tournament">
                 <input type="checkbox" id="team" name="team"
-                        class="content_list" onchange="displaySelectedCreate()">
+                        class="content_list" onchange="displaySelectedCreate();showFeatures4()">
                 <label for="team_name">チーム名</label>
             </label>
             <label class="tournament">
                 <input type="checkbox" id="time_name" name="time_name"
-                        class="content_list" onchange="displaySelectedCreate()">
+                        class="content_list" onchange="displaySelectedCreate();showFeatures5()">
                 <label for="time_display">クリア時間</label>
             </label>
 
                 <input type="checkbox" id="point" name="point"
-                        class="content_list" onchange="displaySelectedCreate()">
+                        class="content_list" onchange="displaySelectedCreate();showFeatures6()">
                 <label for="point_display">クリア点数</label>
             </label>
             <div>選択結果</div>
@@ -52,50 +53,54 @@
             
           
         </div>
-        <div id="reception-name">
-            <p>受付番号</p>
-            <p id="counter">0</p>
-            <button type="button" id="increment">+1</button>
-            <button type="button" id="decrement">-1</button>
-            <button type="button" id="reset">Re</button>
-        </div>
-        <div id="department-name">
-            <p>部門名</p>
-            <input type="button" value="追加" onclick="clickBtn3()" />
-            <input type="button" value="削除" onclick="clickBtn4()" /> 
-            <div id="div2"></div>
-        </div>
-        <div id="school-name">
-            <p>学校名</p>
-            <input type="button" value="追加" onclick="clickBtn5()" />
-            <input type="button" value="削除" onclick="clickBtn6()" /> 
-            <div id="div3"></div>
-        </div>
-        <div id="team-name">
-            <p>チーム名</p>
-            <input type="button" value="追加" onclick="clickBtn7()" />
-            <input type="button" value="削除" onclick="clickBtn8()" /> 
-            <div id="div4"></div>
-        </div>
-        <div id="time-name1">
-            <p>クリア時間</p>
-            <p>0.1秒を指定：<input type="time" name="example2" step="0.001"></p>
-        </div>
-        <div id="time-name2">
-            <div id="container">
-                <div id="time">00:00.000</div>
-                <div id="buttons">
-                    <input id="start1" type="button" value="start">
-                    <input id="stop" type="button" value="stop">
-                    <input id="reset1" type="button" value="reset">
+        <div class = record-name>
+            <div id="reception-name">
+                <p>受付番号</p>
+                <p id="counter">0</p>
+                <button type="button" id="increment">+1</button>
+                <button type="button" id="decrement">-1</button>
+                <button type="button" id="reset">Re</button>
+            </div>
+            <div id="department-name">
+                <p>部門名</p>
+                <input type="button" value="追加" onclick="clickBtn3()" />
+                <input type="button" value="削除" onclick="clickBtn4()" /> 
+                <div id="div2"></div>
+            </div>
+            <div id="school-name">
+                <p>学校名</p>
+                <input type="button" value="追加" onclick="clickBtn5()" />
+                <input type="button" value="削除" onclick="clickBtn6()" /> 
+                <div id="div3"></div>
+            </div>
+            <div id="team-name">
+                <p>チーム名</p>
+                <input type="button" value="追加" onclick="clickBtn7()" />
+                <input type="button" value="削除" onclick="clickBtn8()" /> 
+                <div id="div4"></div>
+            </div>
+            <div id = "time-names">
+                <div id="time-name1">
+                    <p>クリア時間</p>
+                    <p>0.1秒を指定：<input type="time" name="example2" step="0.001"></p>
                 </div>
-            </div> 
+                <div id="time-name2">
+                    <div id="container">
+                        <div id="time">00:00.000</div>
+                        <div id="buttons">
+                            <input id="start1" type="button" value="start">
+                            <input id="stop" type="button" value="stop">
+                            <input id="reset1" type="button" value="reset">
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div id="number-point">
+                <p>クリア点数</p>
+                <input type="number">
+            </div>
         </div>
-        <div id="number-point">
-            <p>クリア点数</p>
-            <input type="number">
-        </div>
-        
+    <a href="show.html">移動</a>
        
 
         
@@ -103,6 +108,7 @@
         <script src="{% static 'js/style.js' %}"></script>
         <script src="{% static 'js/count.js' %}"></script>
         <script src="{% static 'js/stopwatch.js' %}"></script>
+        <script src="{% static 'js/display.js' %}"></script>
     
     </body>
 </html>
