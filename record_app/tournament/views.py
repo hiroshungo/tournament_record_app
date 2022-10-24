@@ -19,7 +19,10 @@ class TournamentView(TemplateView):
             self.params['result'] = 'not checked'
         self.params['form'] = TournamentForm(request.POST)
         return render(request, 'tournament/index.html', self.params)
-
 def index(request):
-    return render(request, 'tournament/index.html')
+    return render(request, 'index.html')
 def show(request):
+    return render(request, 'show.html')
+
+
+    
